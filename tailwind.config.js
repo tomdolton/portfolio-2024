@@ -8,7 +8,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-1": "url('/images/background-1@2x.png')",
+        "gradient-1": "url('/images/background-1@2x.webp')",
+        "gradient-2": "url('/images/background-2@2x.webp')",
       },
 
       colors: {

@@ -1,16 +1,24 @@
 "use client";
 
-import Image from "next/image";
 import Navbar from "./components/Navbar";
 import Banner from "./components/Banner";
+import About from "./components/About";
+import Projects from "./components/Projects";
+import Skills from "./components/Skills";
 
 export default function Home() {
   return (
     <>
-      <div className="h-[899px] relative bg-gradient-1 bg-cover bg-no-repeat bg-center">
+      <div className="h-[899px] bg-gradient-1 bg-cover bg-no-repeat bg-center">
         <Navbar />
 
-        <Banner />
+        <Banner className="py-60 md:py-40" />
+
+        <About className="md:py-36" />
+      </div>
+
+      <div className="h-[1823px] bg-gradient-2 bg-cover bg-no-repeat bg-center">
+        <Projects className="py-80" />
       </div>
     </>
   );

@@ -1,7 +1,6 @@
-import Image from "next/image";
 import { motion } from "framer-motion";
 
-export default function Banner() {
+export default function Banner({ className }) {
   const line1 = "Tom Dolton";
   const line2 = "Web Developer";
 
@@ -25,7 +24,7 @@ export default function Banner() {
   };
 
   return (
-    <header className={`grid items-center justify-items-start py-60 md:py-80`}>
+    <header className={`${className} grid items-center justify-items-start`}>
       <div className="container space-y-4 relative">
         <motion.div variants={sentence} initial="hidden" animate="visible">
           <h1 className="text-6xl md:text-8xl font-medium with-line-horizontal">
