@@ -1,6 +1,6 @@
 import { motion, useSpring } from "framer-motion";
 
-export default function Skills() {
+export default function Skills({ className }) {
   // Frontend
   // Backend
   // Frameworks
@@ -9,7 +9,7 @@ export default function Skills() {
   // Source Control/Project Management
   const skillsData = [
     {
-      name: "CSS / SCSS / CSS-in-JS",
+      name: "CSS / SCSS",
       color: "#22d3ee",
       score: 100,
       class: "from-[#00B3CC] to-[#D6FF7F]",
@@ -59,7 +59,7 @@ export default function Skills() {
     },
     {
       name: "MySQL",
-      score: 50,
+      score: 55,
       color: "#4945ff",
       class: "from-violet-600 to-purple-800",
     },
@@ -69,27 +69,22 @@ export default function Skills() {
       color: "#0675c4",
       class: "from-indigo-800 to-blue-500",
     },
+
     {
-      name: "AWS",
-      score: 35,
-      color: "#ff9900",
-      class: "from-amber-500 to-amber-700",
-    },
-    {
-      name: "Tailwind",
+      name: "Tailwind CSS",
       score: 90,
       color: "#ff9900",
       class: "from-amber-500 to-amber-700",
     },
     {
-      name: "Bootstrap",
+      name: "Bootstrap 5",
       score: 85,
       color: "#ff9900",
       class: "from-amber-500 to-amber-700",
     },
     {
       name: "Shopify",
-      score: 45,
+      score: 50,
       color: "#ff9900",
       class: "from-amber-500 to-amber-700",
     },
@@ -100,35 +95,29 @@ export default function Skills() {
       class: "from-amber-500 to-amber-700",
     },
     {
-      name: "JIRA",
-      score: 80,
-      color: "#ff9900",
-      class: "from-amber-500 to-amber-700",
-    },
-    {
-      name: "Docker?",
-      score: 20,
+      name: "AWS",
+      score: 35,
       color: "#ff9900",
       class: "from-amber-500 to-amber-700",
     },
   ];
 
   return (
-    <section
-      id="skills"
-      className="container my-36 pt-48 mt-48 max-w-screen-lg mx-auto"
-    >
-      <h2 className="with-line mb-6">Skills</h2>
+    <section id="skills" className={`${className}`}>
+      <div className="container">
+        <h2 className="with-line-horizontal mb-8">Skills</h2>
+      </div>
 
-      <div className="space-y-6">
+      <div className="grid lg:grid-cols-2 gap-x-24 gap-3 bg-gradient-to-b from-blue-500/15 to-blue-900/15 rounded-2xl p-6 md:p-8 mx-6">
         {skillsData.map((skill, index) => (
           <div key={index} className="flex items-center">
-            <h3 className="w-48 shrink-0">{skill.name}</h3>
+            <h3 className="w-28 sm:w-36 shrink-0 sm:text-lg">{skill.name}</h3>
 
-            <div className="w-full rounded-full">
+            <div className="w-full rounded-full bg-blue-100/20">
               <motion.div
+                className={`bg-white rounded-full h-3 opacity-70 bg-gradient-to-r from-blue-400 to to-blue-200`}
+                // className={`bg-white rounded-full h-3 opacity-70 bg-gradient-to-r ${skill.class}`}
                 // style={{ background: `${skill.color}` }}
-                className={`bg-white rounded-full h-4 opacity-70 bg-gradient-to-r ${skill.class}`}
                 transition={{
                   type: "spring",
                   stiffness: 30,

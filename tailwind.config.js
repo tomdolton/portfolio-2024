@@ -10,6 +10,7 @@ module.exports = {
       backgroundImage: {
         "gradient-1": "url('/images/background-1@2x.webp')",
         "gradient-2": "url('/images/background-2@2x.webp')",
+        "gradient-3": "url('/images/background-3@2x.webp')",
       },
 
       colors: {
@@ -22,10 +23,12 @@ module.exports = {
           200: "#F0F0F03C",
         },
 
-        cerulean: {
+        blue: {
           100: "#52D3C9",
+          200: "#3DDCB2",
           400: "#09A9D2",
-          900: "#3DDCB2",
+          500: "#6095DA",
+          900: "#010106",
         },
       },
     },
