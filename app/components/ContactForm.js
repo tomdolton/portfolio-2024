@@ -112,53 +112,54 @@ export default function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="text-right">
-      <FormInput
-        type="text"
-        value={fullName}
-        placeholder="Enter full name"
-        label="Name"
-        name="fullName"
-        required={true}
-        onChange={(e) => {
-          setFullName(e.target.value);
-          setRecaptchaNeeded(true);
-        }}
-        className="mb-6"
-        error={errors?.fullName}
-      />
-
-      <FormInput
-        type="email"
-        value={email}
-        placeholder="Enter email"
-        label="Email"
-        name="email"
-        required={true}
-        onChange={(e) => {
-          setEmail(e.target.value);
-          setRecaptchaNeeded(true);
-        }}
-        className="mb-6"
-        error={errors?.email}
-      />
-
-      <div className="mb-6 flex flex-col text-left">
-        <label htmlFor="message" className="pl-1">
-          Message
-        </label>
-        <textarea
-          name="message"
-          value={message}
+    <form onSubmit={handleSubmit} className="text-right max-w-4xl">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+        <FormInput
+          type="text"
+          value={fullName}
+          placeholder="Name"
+          label="Name"
+          name="Name"
           required={true}
-          placeholder="Enter message"
           onChange={(e) => {
-            setMessage(e.target.value);
+            setFullName(e.target.value);
             setRecaptchaNeeded(true);
           }}
-          className="border-b bg-transparent py-2 px-1 ring-black focus:rounded-sm focus:outline-none focus:ring-1"
-          error={errors?.message}
-        ></textarea>
+          error={errors?.fullName}
+        />
+
+        <FormInput
+          type="email"
+          value={email}
+          placeholder="Email address"
+          label="Email address"
+          name="email"
+          required={true}
+          onChange={(e) => {
+            setEmail(e.target.value);
+            setRecaptchaNeeded(true);
+          }}
+          error={errors?.email}
+        />
+
+        <div className="flex flex-col text-left md:col-span-2">
+          <label htmlFor="message" className="sr-only">
+            Message
+          </label>
+          <textarea
+            name="message"
+            value={message}
+            required={true}
+            placeholder="Type your message here..."
+            onChange={(e) => {
+              setMessage(e.target.value);
+              setRecaptchaNeeded(true);
+            }}
+            className="border border-grey-200 bg-white/10 text-offwhite px-4 py-3 ring-offwhite focus:outline-none focus:ring-1 rounded-lg transition-all"
+            rows={4}
+            error={errors?.message}
+          ></textarea>
+        </div>
       </div>
 
       {recaptchaNeeded && (
@@ -166,19 +167,16 @@ export default function ContactForm() {
           onChange={onReCAPTCHAChange}
           size="normal"
           sitekey={process.env.NEXT_PUBLIC_CAPTCHA_SITE_KEY}
+          className="mb-4"
         />
       )}
 
       <button
         type="submit"
         disabled={isSending}
-        className="text-lg border-offwhite border rounded-3xl px-5 py-2.5 mt-auto flex justify-between items-center gap-11 hover:gap-14 hover:bg-white/10 transition-all"
+        className=" text-lg border-offwhite border rounded-3xl px-5 py-2.5 mt-auto flex justify-between items-center gap-11 hover:gap-14 hover:bg-white/10 transition-all my-4"
       >
-        {isSending ? (
-          <IconSpinner className="absolute left-12 top-2 animate-spin" />
-        ) : (
-          "Submit"
-        )}
+        {isSending ? <IconSpinner className="mx-4 animate-spin" /> : "Submit"}
         <RightArrow />
       </button>
 

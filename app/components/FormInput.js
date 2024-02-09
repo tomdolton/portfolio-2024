@@ -13,7 +13,7 @@ export default function FormInput({
 }) {
   return (
     <div className={`${className} flex flex-col text-left`}>
-      <label htmlFor={name} className="mb-1 pl-1">
+      <label htmlFor={name} className="sr-only">
         {label}
       </label>
 
@@ -24,7 +24,7 @@ export default function FormInput({
         placeholder={placeholder}
         onChange={onChange}
         required={required}
-        className={`border-b bg-transparent px-1 py-2 ring-black focus:rounded-sm focus:outline-none focus:ring-1`}
+        className={`border border-grey-200 bg-white/10 text-offwhite px-4 py-3 ring-offwhite focus:outline-none focus:ring-1 rounded-lg transition-all`}
       />
       {error && <p className="text-red-600">{label} cannot be empty.</p>}
     </div>

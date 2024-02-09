@@ -12,7 +12,7 @@ export default function IconSpinner({ className }) {
         cx="50"
         cy="50"
         fill="none"
-        stroke="#0d0d0d"
+        stroke="#F0F0F0"
         strokeWidth="6"
         r="37"
         strokeDasharray="174.35839227423352 60.119464091411174"
