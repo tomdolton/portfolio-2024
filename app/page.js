@@ -6,6 +6,7 @@ import About from "./components/About";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -26,6 +27,8 @@ export default function Home() {
 
       <div className="min-h-[653px] bg-gradient-3 bg-cover bg-no-repeat bg-top pt-32">
         <Contact className="mb-40" />
+
+        <Footer className="my-14" />
       </div>
     </>
   );

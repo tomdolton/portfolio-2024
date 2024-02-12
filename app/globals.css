@@ -33,14 +33,18 @@ body {
 } */
 
 @layer base {
+  html,
   body {
+    scroll-behavior: smooth;
     overflow-x: hidden;
-    @apply bg-black;
-    @apply text-offwhite;
+  }
+
+  body {
+    @apply bg-black text-offwhite;
   }
 
   h2 {
-    @apply text-3xl md:text-5xl font-medium tracking-wide;
+    @apply text-center md:text-left text-3xl md:text-5xl font-medium tracking-wide;
   }
 }
 
@@ -56,6 +60,21 @@ body {
       before:-left-4 
       before:top-1/2 
       before:-translate-x-full;
+  }
+
+  .with-line-reverse {
+    @apply relative
+    before:border-t 
+    before:border-offwhite 
+    before:border-dashed 
+    before:absolute 
+    before:w-screen 
+    before:h-1 
+    before:left-full
+    before:top-1/2;
+  }
+  .with-line-reverse::before {
+    left: calc(100% + 1.25rem);
   }
 
   .with-line-vertical {

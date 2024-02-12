@@ -27,12 +27,14 @@ export default function Banner({ className }) {
     <header className={`${className} grid items-center justify-items-start`}>
       <div className="container space-y-4 relative">
         <motion.div variants={sentence} initial="hidden" animate="visible">
-          <h1 className="text-6xl md:text-8xl font-medium with-line-horizontal">
-            {line1.split("").map((char, index) => (
-              <motion.span key={`${char}-${index}`} variants={letter}>
-                {char}
-              </motion.span>
-            ))}
+          <h1 className="text-6xl md:text-8xl font-medium text-center md:text-left">
+            <span className="with-line-horizontal">
+              {line1.split("").map((char, index) => (
+                <motion.span key={`${char}-${index}`} variants={letter}>
+                  {char}
+                </motion.span>
+              ))}
+            </span>
           </h1>
 
           <br />
@@ -45,7 +47,7 @@ export default function Banner({ className }) {
           </h2>
         </motion.div>
 
-        <p className="md:text-lg">
+        <p className="text-center md:text-left md:text-lg">
           Full stack web developer specialising in front end.
         </p>
       </div>

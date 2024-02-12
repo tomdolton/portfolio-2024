@@ -105,7 +105,9 @@ export default function Skills({ className }) {
   return (
     <section id="skills" className={`${className}`}>
       <div className="container">
-        <h2 className="with-line-horizontal mb-8">Skills</h2>
+        <h2 className="mb-8">
+          <span className="with-line-horizontal">Skills</span>
+        </h2>
       </div>
 
       <div className="grid lg:grid-cols-2 gap-x-24 gap-3 bg-gradient-to-b from-blue-500/15 to-blue-900/15 rounded-2xl p-6 md:p-8 mx-6">

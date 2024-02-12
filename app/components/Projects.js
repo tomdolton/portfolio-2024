@@ -66,7 +66,9 @@ export default function Projects({ className }) {
   return (
     <section id="projects" className={`${className}`}>
       <div className="container">
-        <h2 className="with-line-horizontal mb-8">Projects</h2>
+        <h2 className="mb-8">
+          <span className="with-line-horizontal">Projects</span>
+        </h2>
       </div>
 
       <div className="px-6 grid xl:grid-cols-3 gap-5">
@@ -83,7 +85,7 @@ export default function Projects({ className }) {
           >
             {project.image && (
               <Image
-                className={`h-full w-auto max-w-[400px] object-cover object-left-top rounded-lg ${
+                className={`h-full w-full max-w-[400px] object-cover object-left-top rounded-lg ${
                   project.image.alignRight && "lg:order-2"
                 }`}
                 src={project.image.url}

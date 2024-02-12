@@ -2,7 +2,9 @@ export default function About({ className }) {
   return (
     <section id="about" className={`${className} container`}>
       <div className="max-w-prose space-y-4">
-        <h2 className="with-line-horizontal">About me</h2>
+        <h2>
+          <span className="with-line-horizontal">About me</span>
+        </h2>
         <p>
           I&apos;m a full-stack developer with over 3 years of experience. I
           build accessible, responsive websites and web apps using modern HTML,
