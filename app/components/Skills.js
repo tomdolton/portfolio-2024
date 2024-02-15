@@ -1,4 +1,28 @@
 import { motion, useSpring } from "framer-motion";
+import { enterLeft, fadeUp } from "../utils/animations";
+
+const barsParent = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      when: "beforeChildren",
+      delayChildren: 0.3,
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const bars = {
+  hidden: { width: 0 },
+  visible: (score) => ({
+    width: `${score}%`,
+    transition: {
+      type: "spring",
+      stiffness: 32,
+    },
+  }),
+};
 
 export default function Skills({ className }) {
   // Frontend
@@ -105,12 +129,24 @@ export default function Skills({ className }) {
   return (
     <section id="skills" className={`${className}`}>
       <div className="container">
-        <h2 className="mb-8">
+        <motion.h2
+          className="mb-8"
+          variants={enterLeft}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-150px" }}
+        >
           <span className="with-line-horizontal">Skills</span>
-        </h2>
+        </motion.h2>
       </div>
 
-      <div className="grid lg:grid-cols-2 gap-x-24 gap-3 bg-gradient-to-b from-blue-500/15 to-blue-900/15 rounded-2xl p-6 md:p-8 mx-6">
+      <motion.div
+        className="grid lg:grid-cols-2 gap-x-24 gap-3 bg-gradient-to-b from-blue-500/15 to-blue-900/15 rounded-2xl p-6 md:p-8 mx-6"
+        variants={barsParent}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-150px" }}
+      >
         {skillsData.map((skill, index) => (
           <div key={index} className="flex items-center">
             <h3 className="w-28 sm:w-36 shrink-0 sm:text-lg">{skill.name}</h3>
@@ -120,20 +156,13 @@ export default function Skills({ className }) {
                 className={`bg-white rounded-full h-3 opacity-70 bg-gradient-to-r from-blue-400 to to-blue-200`}
                 // className={`bg-white rounded-full h-3 opacity-70 bg-gradient-to-r ${skill.class}`}
                 // style={{ background: `${skill.color}` }}
-                transition={{
-                  type: "spring",
-                  stiffness: 30,
-                  duration: 2,
-                  delay: 0.5,
-                }}
-                initial={{ width: 0 }}
-                whileInView={{ width: `${skill.score}%` }}
-                viewport={{ once: true }}
+                custom={skill.score}
+                variants={bars}
               ></motion.div>
             </div>
           </div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }

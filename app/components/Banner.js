@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
+import { enterLeft } from "../utils/animations";
 
 export default function Banner({ className }) {
-  const line1 = "Tom Dolton";
+  const line1 = "Tom  Dolton";
   const line2 = "Web Developer";
 
   const sentence = {
@@ -9,47 +10,64 @@ export default function Banner({ className }) {
     visible: {
       opacity: 1,
       transition: {
-        delayChildren: 0.5,
-        staggerChildren: 0.08,
+        when: "beforeChildren",
+        delayChildren: 0.1,
+        staggerChildren: 0.1,
       },
     },
   };
 
   const letter = {
-    hidden: { opacity: 0, y: 50 },
+    hidden: { y: 10, opacity: 0 },
     visible: {
-      opacity: 1,
       y: 0,
+      opacity: 1,
     },
+  };
+
+  const enterLeftBanner = {
+    visible: {
+      x: 0,
+      transition: {
+        type: "spring",
+        bounce: 0.2,
+      },
+    },
+    hidden: { x: -200 },
   };
 
   return (
     <header className={`${className} grid items-center justify-items-start`}>
-      <div className="container space-y-4 relative">
+      <div className="container relative">
         <motion.div variants={sentence} initial="hidden" animate="visible">
-          <h1 className="text-6xl md:text-8xl font-medium text-center md:text-left">
-            <span className="with-line-horizontal">
-              {line1.split("").map((char, index) => (
-                <motion.span key={`${char}-${index}`} variants={letter}>
-                  {char}
-                </motion.span>
-              ))}
-            </span>
+          <h1 className="text-6xl md:text-8xl font-medium text-center md:text-left relative mb-4">
+            <motion.span
+              className="with-line-horizontal inline-block top-1/2 absolute"
+              variants={enterLeftBanner}
+            ></motion.span>
+            {line1.split("").map((char, index) => (
+              <motion.span key={`${char}-${index}`} variants={letter}>
+                {char}
+              </motion.span>
+            ))}
           </h1>
 
-          <br />
-          <h2 className="text-2xl md:text-4xl font-medium tracking-wider">
+          {/* <br /> */}
+          <h2 className="text-2xl md:text-4xl font-medium tracking-wider mb-4">
             {line2.split("").map((char, index) => (
               <motion.span key={`${char}-${index}`} variants={letter}>
                 {char}
               </motion.span>
             ))}
           </h2>
-        </motion.div>
 
-        <p className="text-center md:text-left md:text-lg">
-          Full stack web developer specialising in front end.
-        </p>
+          <motion.p
+            variants={letter}
+            className="text-center md:text-left md:text-lg"
+          >
+            Full stack web developer specialising in front end.
+          </motion.p>
+        </motion.div>
       </div>
     </header>
   );

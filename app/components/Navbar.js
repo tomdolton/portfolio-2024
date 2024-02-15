@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import LinkedIn from "./icons/LinkedIn";
 import Github from "./icons/Github";
+import { motion } from "framer-motion";
+import { enterTop } from "../utils/animations";
 
 export default function Navbar() {
   const pageData = {
@@ -40,14 +42,19 @@ export default function Navbar() {
         </div>
       </div>
 
-      <div className="absolute right-4 md:right-8 top-28 md:top-64 inline-flex flex-col gap-4 with-line-vertical">
+      <motion.div
+        className="absolute right-4 md:right-8 top-28 md:top-64 inline-flex flex-col gap-4 with-line-vertical"
+        variants={enterTop}
+        initial="hidden"
+        animate="visible"
+      >
         <a href={pageData.socials.github} target="_blank">
           <Github />
         </a>
         <a href={pageData.socials.linkedIn} target="_blank">
           <LinkedIn />
         </a>
-      </div>
+      </motion.div>
     </nav>
   );
 }

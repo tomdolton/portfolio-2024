@@ -1,5 +1,7 @@
 import Image from "next/image";
 import RightArrow from "./icons/RightArrow";
+import { motion } from "framer-motion";
+import { enterLeft, fadeUp } from "../utils/animations";
 
 export default function Projects({ className }) {
   const projects = [
@@ -66,12 +68,24 @@ export default function Projects({ className }) {
   return (
     <section id="projects" className={`${className}`}>
       <div className="container">
-        <h2 className="mb-8">
+        <motion.h2
+          className="mb-8"
+          variants={enterLeft}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-150px" }}
+        >
           <span className="with-line-horizontal">Projects</span>
-        </h2>
+        </motion.h2>
       </div>
 
-      <div className="px-6 grid xl:grid-cols-3 gap-5">
+      <motion.div
+        className="px-6 grid xl:grid-cols-3 gap-5"
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-150px" }}
+      >
         {projects.map((project, index) => (
           <div
             key={index}
@@ -133,7 +147,7 @@ export default function Projects({ className }) {
             </div>
           </div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }
