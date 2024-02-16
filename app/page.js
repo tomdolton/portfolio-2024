@@ -11,24 +11,24 @@ import Footer from "./components/Footer";
 export default function Home() {
   return (
     <>
-      <div className="min-h-[899px] bg-gradient-1 bg-cover bg-no-repeat bg-center">
+      <div className="bg-gradient-1 bg-no-repeat bg-right-top bg-cover">
         <Navbar />
 
-        <Banner className="py-60 md:py-40" />
+        <Banner className="py-60 md:py-48" />
 
-        <About className="md:py-36" />
+        <About className="md:pt-48" />
       </div>
 
-      <div className="min-h-[1823px] bg-gradient-2 bg-cover bg-no-repeat bg-center">
-        <Projects className="mt-80 mb-40" />
+      <div className="bg-gradient-2 bg-contain bg-no-repeat bg-left-top">
+        <Projects className="pt-40" />
 
-        <Skills className="" />
+        <Skills className="pt-40" />
       </div>
 
-      <div className="min-h-[653px] bg-gradient-3 bg-cover bg-no-repeat bg-top pt-32">
-        <Contact className="mb-40" />
+      <div className="bg-gradient-3 bg-no-repeat bg-left-top bg-cover">
+        <Contact className="pt-64 pb-32" />
 
-        <Footer className="my-14" />
+        <Footer className="pb-14" />
       </div>
     </>
   );

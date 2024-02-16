@@ -8,14 +8,14 @@ export default function Projects({ className }) {
     {
       title: "MindsMe",
       text: "Developed for the Ministry of Justice, MindsMe is a web app for prison leavers that provides assessment of a brain injury, with the ability for them and their probation officer to track their mental wellbeing. <br/><br/> As part of a small team in a fullstack role my responsibilities included user surveys, tools and analytics dashboard.",
-      tech: ["Laravel", "Vue.js", "MySQL", "SCSS", "HTML5"],
+      tech: ["Laravel", "Vue.js", "MySQL", "SCSS", "Vuetify"],
       url: "https://orbitalinnovations.com/innovations/apps-and-platforms#mindsme",
 
       wide: false,
     },
     {
       title: "Orbital Global websites",
-      text: "A suite of websites for Orbital Global, which include blogging features enabled by my integrating Strapi headless CMS integration with Next.js. As the sole developer working closely with a designer these sites includes custom animations done with a combination of CSS, framer motion and lottie files.",
+      text: "A suite of marketing websites for Orbital Global, which include blogging features enabled by my integrating Strapi headless CMS integration with Next.js to make four static generated sites. As the sole developer working closely with a designer, I also created custom animations using a combination of CSS, framer motion and lottie files.",
       tech: ["Next.js", "React", "Tailwind", "HTML5", "Strapi"],
       url: "https://orbitalmedia.com",
       image: {
@@ -29,8 +29,8 @@ export default function Projects({ className }) {
     },
     {
       title: "Discover More",
-      text: "Suffolk Libraries Discover More allows people to discover events based on their mood preferences.",
-      tech: ["Laravel", "Vue", "Tailwind", "HTML5", "PHP", "MySQL"],
+      text: "Suffolk Libraries Discover More allows people to discover events based on their mood preferences. The site includes an extensive search feature with filters as well as a recommendation feature where events are recommended based on user responses to a questionnaire, using an AI API recommendation engine. The site also visualises user response and event data in charts and heat-maps for administrators.",
+      tech: ["Laravel", "Vue", "Inertia", "Tailwind", "PHP", "MySQL"],
       url: "https://discovermore.suffolklibraries.co.uk/",
       image: {
         url: "/images/projects/discover-more.png",
@@ -57,7 +57,7 @@ export default function Projects({ className }) {
     // },
     {
       title: "Innovation Labs",
-      text: "Innovation Labs Group provides experienced, tried and tested support for innovation, entrepreneurship and skills acquisition, set within a friendly, supportive and cost effective coworking environment.",
+      text: "Innovation Labs are a range of co-working hubs which provide support for entrepreneurship and skills acquisition. I was primarily responsible for building the website, which make user of multi level authentication for different user groups, Stripe payment API for managing subscriptions and the Google maps API.",
       tech: ["Laravel", "Vue.js", "SCSS", "Bootstrap", "MySQL"],
       url: "https://innovationlabsgroup.com/",
 
@@ -128,13 +128,6 @@ export default function Projects({ className }) {
                   </li>
                 ))}
               </ul>
-              {/* <ul className="grid grid-cols-3 rounded-lg overflow-hidden">
-                {project.tech.map((item, index) => (
-                  <li className="text-sm py-1 px-5 bg-navy/50" key={index}>
-                    {item}
-                  </li>
-                ))}
-              </ul> */}
 
               <a
                 className="text-lg border-offwhite border rounded-3xl px-5 py-2.5 mt-auto flex justify-between items-center gap-11 hover:gap-14 hover:bg-white/10 transition-all"

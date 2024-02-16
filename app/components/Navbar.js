@@ -43,7 +43,7 @@ export default function Navbar() {
       </div>
 
       <motion.div
-        className="absolute right-4 md:right-8 top-28 md:top-64 inline-flex flex-col gap-4 with-line-vertical"
+        className="absolute right-4 md:right-8 top-28 md:top-72 inline-flex flex-col gap-4 with-line-vertical"
         variants={enterTop}
         initial="hidden"
         animate="visible"

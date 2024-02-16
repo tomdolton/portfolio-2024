@@ -16,7 +16,8 @@ export const enterTop = {
     transition: {
       type: "spring",
       bounce: 0.2,
-      delay: 2.6,
+      duration: 1.2,
+      delay: 2.5,
     },
   },
   hidden: { y: -500 },
