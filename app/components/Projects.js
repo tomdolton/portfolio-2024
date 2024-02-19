@@ -127,10 +127,10 @@ export default function Projects({ className }) {
                 dangerouslySetInnerHTML={{ __html: project.text }}
               ></p>
 
-              <ul className="inline-flex flex-wrap justify-start bg-navy/50 py-3 rounded-lg xl:max-w-48 2xl:max-w-none">
+              <ul className="inline-flex flex-wrap justify-start bg-navy/50 py-3 rounded-lg max-w-48 min-[585px]:max-w-none xl:max-w-48 2xl:max-w-none">
                 {project.tech.map((item, index) => (
                   <li
-                    className="text-sm border-r border-offwhite xl:border-0 py-1 px-5 last-of-type:border-0 flex-1 2xl:border-r 2xl:flex-auto"
+                    className="text-sm min-[585px]:border-r border-offwhite xl:border-0 py-1 px-5 last-of-type:border-0 flex-1 2xl:border-r 2xl:flex-auto"
                     key={index}
                   >
                     {item}

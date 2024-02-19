@@ -40,7 +40,7 @@ export default function Banner({ className }) {
     <header className={`${className} grid items-center justify-items-start`}>
       <div className="container relative">
         <motion.div variants={sentence} initial="hidden" animate="visible">
-          <h1 className="text-6xl md:text-8xl font-medium text-center md:text-left relative mb-4">
+          <h1 className="max-[369px]:text-5xl text-6xl md:text-8xl font-medium text-center md:text-left relative mb-4">
             <motion.span
               className="with-line-horizontal inline-block top-1/2 absolute"
               variants={enterLeftBanner}
