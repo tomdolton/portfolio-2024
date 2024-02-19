@@ -1,11 +1,12 @@
 "use client";
+import dynamic from "next/dynamic";
 
 import Navbar from "./components/Navbar";
 import Banner from "./components/Banner";
-import About from "./components/About";
-import Projects from "./components/Projects";
-import Skills from "./components/Skills";
-import Contact from "./components/Contact";
+const About = dynamic(() => import("./components/About"), { ssr: false });
+const Projects = dynamic(() => import("./components/Projects"), { ssr: false });
+const Skills = dynamic(() => import("./components/Skills"), { ssr: false });
+const Contact = dynamic(() => import("./components/Contact"), { ssr: false });
 import Footer from "./components/Footer";
 
 export default function Home() {
