@@ -4,8 +4,9 @@ import "./globals.css";
 const dmSans = DM_Sans({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Tom Dolton Web Developer",
-  description: "Tom Dolton is a UK based Web Developer",
+  title: "Tom Dolton Full Stack Developer",
+  description:
+    "Tom Dolton is a UK based full stack web developer who specialises in front end development",
 };
 
 export default function RootLayout({ children }) {

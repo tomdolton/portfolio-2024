@@ -1,23 +1,25 @@
 import { motion } from "framer-motion";
 import { enterLeft, fadeUp } from "../utils/animations";
+import { isSmallScreen } from "../utils";
 
 export default function About({ className }) {
   return (
     <section id="about" className={`${className} container`}>
       <div className="max-w-prose space-y-4">
         <motion.h2
-          variants={enterLeft}
+          variants={isSmallScreen ? fadeUp : enterLeft}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-300px" }}
+          viewport={{ once: true, margin: isSmallScreen ? "0px" : "-150px" }}
         >
           <span className="with-line-horizontal">About me</span>
         </motion.h2>
+
         <motion.div
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-300px" }}
+          viewport={{ once: true, margin: "-150px" }}
         >
           <p>
             I&apos;m a full-stack developer with over 3 years of experience. I

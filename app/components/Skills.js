@@ -1,5 +1,6 @@
 import { motion, useSpring } from "framer-motion";
 import { enterLeft, fadeUp } from "../utils/animations";
+import { isSmallScreen } from "../utils";
 
 const barsParent = {
   hidden: { opacity: 0 },
@@ -131,10 +132,10 @@ export default function Skills({ className }) {
       <div className="container">
         <motion.h2
           className="mb-8"
-          variants={enterLeft}
+          variants={isSmallScreen ? fadeUp : enterLeft}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-150px" }}
+          viewport={{ once: true, margin: isSmallScreen ? "0px" : "-150px" }}
         >
           <span className="with-line-horizontal">Skills</span>
         </motion.h2>

@@ -2,6 +2,7 @@ import Image from "next/image";
 import RightArrow from "./icons/RightArrow";
 import { motion } from "framer-motion";
 import { enterLeft, fadeUp } from "../utils/animations";
+import { isSmallScreen } from "../utils";
 
 export default function Projects({ className }) {
   const projects = [
@@ -20,7 +21,7 @@ export default function Projects({ className }) {
       url: "https://orbitalmedia.com",
       image: {
         url: "/images/projects/orbital-media.png",
-        alt: "The Orbital Media website homepage screenshot",
+        alt: "The Orbital Media website homepage",
         width: 355,
         height: 355,
         alignRight: true,
@@ -34,34 +35,41 @@ export default function Projects({ className }) {
       url: "https://discovermore.suffolklibraries.co.uk/",
       image: {
         url: "/images/projects/discover-more.png",
-        alt: "The Discover More events search user interface screenshot",
+        alt: "The Discover More events search user interface",
         width: 355,
         height: 355,
         alignRight: false,
       },
       wide: true,
     },
-    // {
-    //   title: "Scoop",
-    //   text: "Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua. Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor. Incididunt Ut Labore Et Dolore Magna Aliqua. Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit, Sed Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna Aliqua.",
-    //   tech: ["Vue.js", "SCSS", "VideoJS", "HTML5"],
-    //   url: "https://mindsme.com",
-    //   image: {
-    //     url: "/images/projects/orbital-media.png",
-    //     alt: "The Orbital Media website homepage screenshot",
-    //     width: 355,
-    //     height: 355,
-    //     alignRight: false,
-    //   },
-    //   wide: true,
-    // },
     {
       title: "Innovation Labs",
       text: "Innovation Labs are a range of co-working hubs which provide support for entrepreneurship and skills acquisition. I was primarily responsible for building the website, which make user of multi level authentication for different user groups, Stripe payment API for managing subscriptions and the Google maps API.",
       tech: ["Laravel", "Vue.js", "SCSS", "Bootstrap", "MySQL"],
       url: "https://innovationlabsgroup.com/",
-
+      image: {
+        url: "/images/projects/innovation-labs.webp",
+        alt: "The Innovation Labs website locations page",
+        width: 355,
+        height: 355,
+        alignRight: true,
+      },
       wide: false,
+      tall: true,
+    },
+    {
+      title: "Scoop",
+      text: "Scoop is an interactive video platform aimed at training and education. Users can control their own journey by through the experience. <br/> I coded custom video player controls and logic tree feature that enabled the product to be deployed for multiple experiences, each with their own walkthrough logic.",
+      tech: ["Vue.js", "VideoJS", "Bulma", "SCSS"],
+      url: "https://citb-scoop-drylining.com/",
+      image: {
+        url: "/images/projects/scoop.webp",
+        alt: "The Scoop website interactive video page",
+        width: 355,
+        height: 355,
+        alignRight: false,
+      },
+      wide: true,
     },
   ];
 
@@ -70,10 +78,10 @@ export default function Projects({ className }) {
       <div className="container">
         <motion.h2
           className="mb-8"
-          variants={enterLeft}
+          variants={isSmallScreen ? fadeUp : enterLeft}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-150px" }}
+          viewport={{ once: true, margin: isSmallScreen ? "0px" : "-150px" }}
         >
           <span className="with-line-horizontal">Projects</span>
         </motion.h2>
@@ -95,11 +103,12 @@ export default function Projects({ className }) {
                   project.image &&
                   "flex flex-col lg:flex-row items-start justify-between gap-8"
                 }
-                ${project.wide ? "xl:col-span-2" : "xl:col-span-1"}`}
+                ${project.wide ? "xl:col-span-2" : "xl:col-span-1"}
+                ${project.tall && "xl:row-span-2 xl:flex-col lg:items-center"}`}
           >
             {project.image && (
               <Image
-                className={`h-full w-full max-w-[400px] object-cover object-left-top rounded-lg ${
+                className={`h-full w-full max-w-[383px] object-cover object-left-top rounded-lg max-h-[383px] ${
                   project.image.alignRight && "lg:order-2"
                 }`}
                 src={project.image.url}
