@@ -7,17 +7,39 @@ import { isSmallScreen } from "../utils";
 export default function Projects({ className }) {
   const projects = [
     {
+      title: "Pravi",
+      text: "Pravi is a SaaS platform designed to help non-profit organisations attract and convert new donors. It leverages AI to generate data-driven donor personas and to create targeted fundraising campaigns and content.<br/><br/>As the lead frontend developer, I was responsible for building a component library using Storybook, architecting the Vue.js interface, and integrating dynamic workflows and multi-step form wizards. I also contributed to backend integration and developed full features, including the AI-powered campaign content generator using the OpenAI API.",
+      tech: [
+        "Vue.js",
+        "Typescript",
+        "Tailwind CSS",
+        "Storybook",
+        "Laravel",
+        "OpenAI API",
+      ],
+      url: "https://pravi.com/",
+      image: {
+        url: "/images/projects/pravi.webp",
+        alt: "The Pravi app find new donors results page",
+        width: 355,
+        height: 355,
+        alignRight: false,
+      },
+      wide: true,
+      tall: false,
+    },
+
+    {
       title: "MindsMe",
-      text: "Developed for the Ministry of Justice, MindsMe is a web app for prison leavers that provides assessment of a brain injury, with the ability for them and their probation officer to track their mental wellbeing. <br/><br/> As part of a small team in a fullstack role my responsibilities included user surveys, tools and analytics dashboard.",
+      text: "Developed for the UK Ministry of Justice, MindsMe is a web app designed to support prison leavers in assessing potential brain injuries and tracking their mental wellbeing in collaboration with probation officers. <br/><br/> As part of a small fullstack team, I contributed to key features including user survey tools, an interactive analytics dashboard, and a three-tier role-based access system for administrators, probation officers, and end users. I also led accessibility improvements following an official audit, and supported backend security enhancements.",
       tech: ["Laravel", "Vue.js", "MySQL", "SCSS", "Vuetify"],
       url: "https://orbitalinnovations.com/innovations/apps-and-platforms#mindsme",
-
       wide: false,
     },
     {
       title: "Orbital Global websites",
-      text: "A suite of marketing websites for Orbital Global, which include blogging features enabled by my integrating Strapi headless CMS integration with Next.js to make four static generated sites. As the sole developer working closely with a designer, I also created custom animations using a combination of CSS, framer motion and lottie files.",
-      tech: ["Next.js", "React", "Tailwind", "HTML5", "Strapi"],
+      text: "A suite of marketing websites for a digital services group, each statically generated with Next.js and powered by a Strapi headless CMS to enable flexible content management and blogging features. <br/><br/>As the sole developer working closely with a designer, I was responsible for the full implementation — from CMS integration to frontend architecture — and built custom animations using CSS, Framer Motion, and Lottie. The sites were deployed to Vercel and optimised for fast performance and smooth user experience.",
+      tech: ["Next.js", "React", "Tailwind CSS", "HTML5", "Strapi", "Vercel"],
       url: "https://orbitalmedia.com",
       image: {
         url: "/images/projects/orbital-media.png",
@@ -30,8 +52,8 @@ export default function Projects({ className }) {
     },
     {
       title: "Discover More",
-      text: "Suffolk Libraries Discover More allows people to discover events based on their mood preferences. The site includes an extensive search feature with filters as well as a recommendation feature where events are recommended based on user responses to a questionnaire, using an AI API recommendation engine. The site also visualises user response and event data in charts and heat-maps for administrators.",
-      tech: ["Laravel", "Vue", "Inertia", "Tailwind", "PHP", "MySQL"],
+      text: "An interactive platform built for Suffolk Libraries that helps users find local events based on their mood preferences. The site includes an advanced search feature with filters, as well as a recommendation engine powered by a custom-built AI API (developed by a partner team) that suggests events based on mood-based questionnaire responses. <br/><br/>For administrators, I implemented dynamic data visualisations using Chart.js and Google Maps API to display user engagement, responses, and event patterns through charts and heatmaps.",
+      tech: ["Laravel", "Vue.js", "Inertia", "Tailwind CSS", "MySQL"],
       url: "https://discovermore.suffolklibraries.co.uk/",
       image: {
         url: "/images/projects/discover-more.png",
@@ -40,27 +62,28 @@ export default function Projects({ className }) {
         height: 355,
         alignRight: false,
       },
-      wide: true,
-    },
-    {
-      title: "Innovation Labs",
-      text: "Innovation Labs are a range of co-working hubs which provide support for entrepreneurship and skills acquisition. I was primarily responsible for building the website, which make user of multi level authentication for different user groups, Stripe payment API for managing subscriptions and the Google maps API.",
-      tech: ["Laravel", "Vue.js", "SCSS", "Bootstrap", "MySQL"],
-      url: "https://innovationlabsgroup.com/",
-      image: {
-        url: "/images/projects/innovation-labs.webp",
-        alt: "The Innovation Labs website locations page",
-        width: 355,
-        height: 355,
-        alignRight: true,
-      },
       wide: false,
       tall: true,
     },
+    // {
+    //   title: "Innovation Labs",
+    //   text: "Innovation Labs are a range of co-working hubs which provide support for entrepreneurship and skills acquisition. I was primarily responsible for building the website, which make user of multi level authentication for different user groups, Stripe payment API for managing subscriptions and the Google maps API.",
+    //   tech: ["Laravel", "Vue.js", "SCSS", "Bootstrap", "MySQL"],
+    //   url: "https://innovationlabsgroup.com/",
+    //   image: {
+    //     url: "/images/projects/innovation-labs.webp",
+    //     alt: "The Innovation Labs website locations page",
+    //     width: 355,
+    //     height: 355,
+    //     alignRight: true,
+    //   },
+    //   wide: false,
+    //   tall: true,
+    // },
     {
       title: "Scoop",
-      text: "Scoop is an interactive video platform aimed at training and education. Users can control their own journey by through the experience. <br/> I coded custom video player controls and logic tree feature that enabled the product to be deployed for multiple experiences, each with their own walkthrough logic.",
-      tech: ["Vue.js", "VideoJS", "Bulma", "SCSS"],
+      text: "Scoop is an interactive video platform built for training and educational experiences, allowing users to control their own journey through branching video content.<br/><br/>I developed custom video player controls and a flexible logic-tree system that enabled the platform to support multiple, reusable walkthrough experiences — each with its own unique branching paths and logic. This allowed the product to scale across different organisations and use cases without additional frontend redevelopment.<br/><br/>Videos are hosted and streamed via AWS, ensuring reliable delivery and performance at scale. State management is handled with Pinia, tracking user progress, video playback status, and inputs in real time to provide a seamless and personalised learning experience.<br/><br/>The platform is distributed as a series of standalone tools tailored for organisations who commission bespoke training content, enabling rapid deployment and easy maintenance.",
+      tech: ["Vue.js", "VideoJS", "Bulma", "SCSS", "AWS"],
       url: "https://citb-scoop-drylining.com/",
       image: {
         url: "/images/projects/scoop.webp",
