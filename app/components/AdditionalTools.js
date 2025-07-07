@@ -5,16 +5,14 @@ export default function AdditionalTools({ className }) {
     "Styling & Animation": [
       "CSS Modules",
       "CSS-in-JS",
+      "shadcn/ui",
       "Framer Motion",
       "Lottie",
       "Responsive Design",
       "Accessibility (WCAG)",
-      "shadcn/ui",
     ],
 
     "Routing & State Management": [
-      "Vue Router",
-      "React Router",
       "SSR",
       "Pinia",
       "Redux Toolkit",
@@ -22,19 +20,16 @@ export default function AdditionalTools({ className }) {
 
     "Testing & Documentation": [
       // "Vitest",
-      // "Jest",
-      // "Testing Library",
+      "Jest",
+      "Testing Library",
       "Storybook",
-      "Lighthouse",
-      "axe-core (Accessibility Testing)",
+      "Accessibility Testing (Lighthouse, axe-core)",
     ],
 
     "API & Data": [
       "REST APIs",
       "OpenAI API",
       "Google Maps API",
-      "Google Charts",
-      "Chart.js",
     ],
 
     "Build Tools & Formatting": [
@@ -45,7 +40,6 @@ export default function AdditionalTools({ className }) {
       "Github",
       "Github Actions",
       "CI/CD",
-      
     ],
 
     "CMS & Platforms": ["Strapi", "WordPress"],
