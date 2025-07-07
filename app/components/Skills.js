@@ -27,7 +27,7 @@ const bars = {
 
 export default function Skills({ className }) {
   const skillsData = {
-    "Core Languages": [
+    "Core Languages & Concepts": [
       {
         name: "JavaScript",
         score: 90,
@@ -47,18 +47,26 @@ export default function Skills({ className }) {
         class: "from-[#00B3CC] to-[#D6FF7F]",
       },
       {
-        name: "Modern CSS Techniques",
+        name: "CSS",
         score: 100,
         color: "#22d3ee",
         class: "from-[#00B3CC] to-[#D6FF7F]",
       },
+
       {
         name: "PHP",
         score: 65,
         color: "#14b8a6",
         class: "from-cyan-500 to-blue-500",
       },
+      {
+        name: "MySQL",
+        score: 55,
+        color: "#4945ff",
+        class: "from-violet-600 to-purple-800",
+      },
     ],
+
     "Frameworks & Libraries": [
       {
         name: "Vue.js",
@@ -85,32 +93,6 @@ export default function Skills({ className }) {
         class: "from-orange-700 to-red-800",
       },
       {
-        name: "MySQL",
-        score: 55,
-        color: "#4945ff",
-        class: "from-violet-600 to-purple-800",
-      },
-      {
-        name: "Headless CMS (Strapi)",
-        score: 60,
-        color: "#0675c4",
-        class: "from-indigo-800 to-blue-500",
-      },
-      {
-        name: "Inertia.js",
-        score: 70,
-        color: "#6366f1",
-        class: "from-indigo-600 to-indigo-800",
-      },
-      {
-        name: "State Management (Pinia / React Context)",
-        score: 65,
-        color: "#ffe66d",
-        class: "from-yellow-400 to-yellow-600",
-      },
-    ],
-    "Styling & UI": [
-      {
         name: "Tailwind CSS",
         score: 95,
         color: "#ff9900",
@@ -123,6 +105,7 @@ export default function Skills({ className }) {
         class: "from-amber-500 to-amber-700",
       },
     ],
+
     "Tooling & Deployment": [
       {
         name: "Build Tools (Vite, Webpack)",
@@ -147,20 +130,6 @@ export default function Skills({ className }) {
         score: 40,
         color: "#ff9900",
         class: "from-amber-500 to-amber-700",
-      },
-    ],
-    "Testing & Docs": [
-      {
-        name: "Storybook",
-        score: 60,
-        color: "#ff9900",
-        class: "from-amber-500 to-amber-700",
-      },
-      {
-        name: "Testing (Vitest / Testing Library / Jest)",
-        score: 50,
-        color: "#06b6d4",
-        class: "from-cyan-500 to-cyan-700",
       },
     ],
   };
