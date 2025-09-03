@@ -22,7 +22,7 @@ export default function About({ className }) {
           viewport={{ once: true, margin: "-150px" }}
         >
           <p>
-            I&apos;m a full-stack developer with over 3 years of experience. I
+            I&apos;m a full-stack developer with over 5 years of experience. I
             build accessible, responsive websites and web apps using modern
             HTML, CSS, Javascript, and PHP practices, having worked with clients
             ranging from the Ministry of Justice to Teva International.
