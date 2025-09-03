@@ -16,10 +16,11 @@ export default function AdditionalTools({ className }) {
       "SSR",
       "Pinia",
       "Redux Toolkit",
+      "TanStack Query (React Query)"
     ],
 
     "Testing & Documentation": [
-      // "Vitest",
+      "Vitest",
       "Jest",
       "Testing Library",
       "Storybook",
@@ -29,7 +30,6 @@ export default function AdditionalTools({ className }) {
     "API & Data": [
       "REST APIs",
       "OpenAI API",
-      "Google Maps API",
     ],
 
     "Build Tools & Formatting": [
@@ -37,7 +37,6 @@ export default function AdditionalTools({ className }) {
       "Webpack",
       "ESLint",
       "Docker",
-      "Github",
       "Github Actions",
       "CI/CD",
     ],
@@ -55,7 +54,7 @@ export default function AdditionalTools({ className }) {
       "Jira",
       "Code Reviews & Pull Requests",
       "Frontend Architecture Ownership",
-      "PRINCE2 Agile Certified",
+      // "PRINCE2 Agile Certified",
     ],
   };
 
