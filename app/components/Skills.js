@@ -36,7 +36,7 @@ export default function Skills({ className }) {
       },
       {
         name: "TypeScript",
-        score: 65,
+        score: 80,
         color: "#f43f5e",
         class: "from-cyan-500 to-blue-500",
       },
@@ -48,7 +48,7 @@ export default function Skills({ className }) {
       },
       {
         name: "CSS",
-        score: 100,
+        score: 98,
         color: "#22d3ee",
         class: "from-[#00B3CC] to-[#D6FF7F]",
       },
@@ -60,8 +60,8 @@ export default function Skills({ className }) {
         class: "from-cyan-500 to-blue-500",
       },
       {
-        name: "MySQL",
-        score: 55,
+        name: "SQL (MySQL, PostgreSQL)",
+        score: 65,
         color: "#4945ff",
         class: "from-violet-600 to-purple-800",
       },
@@ -76,13 +76,13 @@ export default function Skills({ className }) {
       },
       {
         name: "React",
-        score: 80,
+        score: 85,
         color: "#0a7ea4",
         class: "from-teal-600 to-cyan-700",
       },
       {
         name: "Next.js",
-        score: 75,
+        score: 83,
         color: "#0070f3",
         class: "from-neutral-400 to-stone-500",
       },
@@ -94,7 +94,7 @@ export default function Skills({ className }) {
       },
       {
         name: "Tailwind CSS",
-        score: 95,
+        score: 98,
         color: "#ff9900",
         class: "from-amber-500 to-amber-700",
       },
@@ -121,13 +121,13 @@ export default function Skills({ className }) {
       },
       {
         name: "Vercel",
-        score: 40,
+        score: 65,
         color: "#ff9900",
         class: "from-amber-500 to-amber-700",
       },
       {
         name: "AWS",
-        score: 40,
+        score: 60,
         color: "#ff9900",
         class: "from-amber-500 to-amber-700",
       },
