@@ -79,27 +79,32 @@ export default function ContactForm() {
     if (isValidForm) {
       setIsSending(true);
 
-      const res = await fetch("/api/sendgrid", {
-        body: JSON.stringify({
-          email: email,
-          fullName: fullName,
-          message: message,
-          gRecaptchaResponse: captchaValue,
-        }),
+      // POST to internal API proxy which validates Recaptcha and forwards to Formspree.
+      const endpoint = "/api/contact";
+
+      const res = await fetch(endpoint, {
+        method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        method: "POST",
+        body: JSON.stringify({
+          email,
+          fullName,
+          message,
+          "g-recaptcha-response": captchaValue,
+        }),
       });
 
-      const { error } = await res.json();
+      const json = await res.json().catch(() => ({}));
 
-      if (error) {
-        setShowSuccessMessage(false);
+      if (!res.ok) {
+        const msg = json?.error || json?.message || json?.errors?.[0]?.message || 'Send failed';
+        setFailureMessage(msg);
         setShowFailureMessage(true);
         setIsSending(false);
         return;
       }
+
       setShowSuccessMessage(true);
       setShowFailureMessage(false);
       setIsSending(false);
