@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { enterLeft } from "../utils/animations";
+import { WavyBackground } from "./ui/wavy-background";
 
 export default function Banner({ className }) {
   const line1 = "Tom  Dolton";
@@ -37,8 +38,8 @@ export default function Banner({ className }) {
   };
 
   return (
-    <header className={`${className} grid items-center justify-items-start`}>
-      <div className="container relative">
+    <header className={`${className} grid items-center justify-items-start relative`}>
+      <div className="container relative z-10">
         <motion.div variants={sentence} initial="hidden" animate="visible">
           <h1 className="max-[369px]:text-5xl text-6xl md:text-8xl font-medium text-center md:text-left relative mb-4">
             <motion.span
@@ -69,6 +70,8 @@ export default function Banner({ className }) {
           </motion.p>
         </motion.div>
       </div>
+
+      <WavyBackground containerClassName="absolute top-8 left-0 bottom-0 right-0 -z-10 w-full " className="" />
     </header>
   );
 }
