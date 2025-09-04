@@ -31,14 +31,14 @@ export default function Skills({ className }) {
       {
         name: "JavaScript",
         score: 90,
-        color: "#f43f5e",
-        class: "from-cyan-500 to-blue-500",
+        color: "#22d3ee",
+        class: "from-[#00B3CC] to-[#D6FF7F]",
       },
       {
         name: "TypeScript",
         score: 80,
-        color: "#f43f5e",
-        class: "from-cyan-500 to-blue-500",
+        color: "#22d3ee",
+        class: "from-[#00B3CC] to-[#D6FF7F]",
       },
       {
         name: "HTML5",
@@ -56,14 +56,14 @@ export default function Skills({ className }) {
       {
         name: "PHP",
         score: 65,
-        color: "#14b8a6",
-        class: "from-cyan-500 to-blue-500",
+        color: "#22d3ee",
+        class: "from-[#00B3CC] to-[#D6FF7F]",
       },
       {
         name: "SQL (MySQL, PostgreSQL)",
         score: 65,
-        color: "#4945ff",
-        class: "from-violet-600 to-purple-800",
+        color: "#22d3ee",
+        class: "from-[#00B3CC] to-[#D6FF7F]",
       },
     ],
 
@@ -72,37 +72,37 @@ export default function Skills({ className }) {
         name: "Vue.js",
         score: 90,
         color: "#42b883",
-        class: "from-emerald-700 to-green-600",
+        class: "from-emerald-700 to-green-400",
       },
       {
         name: "React",
         score: 85,
-        color: "#0a7ea4",
-        class: "from-teal-600 to-cyan-700",
+        color: "#42b883",
+        class: "from-emerald-700 to-green-400",
       },
       {
         name: "Next.js",
         score: 83,
-        color: "#0070f3",
-        class: "from-neutral-400 to-stone-500",
+        color: "#42b883",
+        class: "from-emerald-700 to-green-400",
       },
       {
         name: "Laravel",
         score: 70,
-        color: "#f7352d",
-        class: "from-orange-700 to-red-800",
+        color: "#42b883",
+        class: "from-emerald-700 to-green-400",
       },
       {
         name: "Tailwind CSS",
         score: 98,
-        color: "#ff9900",
-        class: "from-amber-500 to-amber-700",
+        color: "#42b883",
+        class: "from-emerald-700 to-green-400",
       },
       {
         name: "Bootstrap",
         score: 80,
-        color: "#ff9900",
-        class: "from-amber-500 to-amber-700",
+        color: "#42b883",
+        class: "from-emerald-700 to-green-400",
       },
     ],
 
@@ -111,25 +111,25 @@ export default function Skills({ className }) {
         name: "Build Tools (Vite, Webpack)",
         score: 75,
         color: "#6366f1",
-        class: "from-indigo-500 to-indigo-700",
+        class: "from-indigo-700 to-indigo-400",
       },
       {
         name: "Git",
         score: 90,
-        color: "#ff9900",
-        class: "from-amber-500 to-amber-700",
+        color: "#6366f1",
+        class: "from-indigo-700 to-indigo-400",
       },
       {
         name: "Vercel",
         score: 65,
-        color: "#ff9900",
-        class: "from-amber-500 to-amber-700",
+        color: "#6366f1",
+        class: "from-indigo-700 to-indigo-400",
       },
       {
         name: "AWS",
-        score: 60,
-        color: "#ff9900",
-        class: "from-amber-500 to-amber-700",
+        score: 55,
+        color: "#6366f1",
+        class: "from-indigo-700 to-indigo-400",
       },
     ],
   };
@@ -154,18 +154,18 @@ export default function Skills({ className }) {
             {category}
           </h3>
           <motion.div
-            className="grid lg:grid-cols-2 gap-x-24 gap-3 bg-gradient-to-b from-blue-500/10 to-blue-900/10 rounded-2xl p-6 md:p-8"
+            className="grid lg:grid-cols-2 gap-x-24 gap-y-3 md:gap-y-4 rounded-2xl p-6 md:p-8"
             variants={barsParent}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-150px" }}
           >
             {skills.map((skill, index) => (
-              <div key={index} className="flex items-center">
-                <h4 className="w-28 sm:w-36 shrink-0 sm:text-lg text-white/80">
+              <div key={index} className="flex items-start">
+                <h4 className="w-28 sm:w-36 shrink-0 font-medium text-white/80">
                   {skill.name}
                 </h4>
-                <div className="w-full rounded-full bg-white/10">
+                <div className="w-full rounded-full bg-white/10 mt-1">
                   <motion.div
                     className={`rounded-full h-3 opacity-80 bg-gradient-to-r ${skill.class}`}
                     custom={skill.score}
