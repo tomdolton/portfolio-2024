@@ -15,13 +15,11 @@ import Footer from "./components/Footer";
 export default function Home() {
   return (
     <>
-      <div className="bg-gradient-1 bg-no-repeat bg-right-top bg-cover">
-        <Navbar />
+      <Navbar />
 
-        <Banner className="py-60 md:py-48" />
+      <Banner className="py-60 md:py-48" />
 
-        <About className="md:pt-48" />
-      </div>
+      <About className="md:pt-48" />
 
       <div className="bg-gradient-2 bg-contain bg-no-repeat bg-left-top">
         <Projects className="pt-40" />

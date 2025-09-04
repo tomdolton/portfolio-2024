@@ -114,7 +114,7 @@ export default function Skills({ className }) {
         class: "from-indigo-700 to-indigo-400",
       },
       {
-        name: "Git",
+        name: "Git & Github",
         score: 90,
         color: "#6366f1",
         class: "from-indigo-700 to-indigo-400",
