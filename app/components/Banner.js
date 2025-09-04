@@ -71,7 +71,7 @@ export default function Banner({ className }) {
         </motion.div>
       </div>
 
-      <WavyBackground containerClassName="absolute top-8 left-0 bottom-0 right-0 -z-10 w-full " className="" />
+      <WavyBackground containerClassName="absolute top-8 left-0 bottom-0 right-0 -z-10 w-full hidden sm:block" className="" />
     </header>
   );
 }

@@ -19,19 +19,19 @@ export default function Home() {
 
       <Banner className="py-60 md:py-48" />
 
-      <About className="md:pt-48" />
+      <About className="md:pt-64" />
 
       <div className="bg-gradient-2 bg-contain bg-no-repeat bg-left-top">
-        <Projects className="pt-40" />
+        <Projects className="pt-48" />
 
-        <Skills className="pt-40" />
+        <Skills className="pt-48" />
 
-        <AdditionalTools className="pt-40" />
+        <AdditionalTools className="pt-48" />
       </div>
 
       <div className="bg-gradient-3 bg-no-repeat bg-left-top bg-cover">
         <div className="bg-black/70">
-          <Contact className="pt-64 pb-32 " />
+          <Contact className="pt-64 pb-32" />
 
           <Footer className="pb-14" />
         </div>

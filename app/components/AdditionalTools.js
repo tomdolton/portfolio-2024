@@ -62,18 +62,18 @@ export default function AdditionalTools({ className }) {
 
   return (
     <section className={`mt-16 ${className}`}>
-      <div className="container">
-        <h2 className="text-xl font-semibold mb-6">
+      <div className="container max-w-screen-xl">
+        <h2 className="text-xl font-semibold mb-6 sm:ml-24">
           <span className="with-line-horizontal">Other Tools & Experience</span>
         </h2>
 
-        <div className="flex flex-wrap gap-4 max-w-5xl mx-auto justify-center">
+        <div className="flex flex-wrap gap-4 mx-auto justify-center">
           {allTools.map((tool, idx) => (
             <HoverBorderGradient
               as="span"
               duration={3}
               key={idx}
-              className="inline-flex px-4 py-2 text-sm text-white  rounded-full hover:bg-white/1 transition cursor-default "
+              className="inline-flex px-4 py-2 text-sm text-white rounded-full hover:bg-white/1 transition cursor-default "
             >
               {tool}
             </HoverBorderGradient>

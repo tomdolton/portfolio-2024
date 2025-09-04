@@ -60,7 +60,8 @@ export default function Skills({ className }) {
         class: "from-[#00B3CC] to-[#D6FF7F]",
       },
       {
-        name: "SQL (MySQL, PostgreSQL)",
+        name: "SQL",
+        info: "(MySQL, PostgreSQL)",
         score: 65,
         color: "#22d3ee",
         class: "from-[#00B3CC] to-[#D6FF7F]",
@@ -108,7 +109,8 @@ export default function Skills({ className }) {
 
     "Tooling & Deployment": [
       {
-        name: "Build Tools (Vite, Webpack)",
+        name: "Build Tools",
+        info: "(Vite, Webpack)",
         score: 75,
         color: "#6366f1",
         class: "from-indigo-700 to-indigo-400",
@@ -146,37 +148,44 @@ export default function Skills({ className }) {
         >
           <span className="with-line-horizontal">Skills</span>
         </motion.h2>
-      </div>
 
-      {Object.entries(skillsData).map(([category, skills]) => (
-        <div key={category} className="mb-12 px-6">
-          <h3 className="text-xl font-semibold mb-4 text-white/90">
-            {category}
-          </h3>
-          <motion.div
-            className="grid lg:grid-cols-2 gap-x-24 gap-y-3 md:gap-y-4 rounded-2xl p-6 md:p-8"
-            variants={barsParent}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-150px" }}
-          >
-            {skills.map((skill, index) => (
-              <div key={index} className="flex items-start">
-                <h4 className="w-28 sm:w-36 shrink-0 font-medium text-white/80">
-                  {skill.name}
-                </h4>
-                <div className="w-full rounded-full bg-white/10 mt-1">
-                  <motion.div
-                    className={`rounded-full h-3 opacity-80 bg-gradient-to-r ${skill.class}`}
-                    custom={skill.score}
-                    variants={bars}
-                  ></motion.div>
+        {Object.entries(skillsData).map(([category, skills]) => (
+          <div key={category} className="mb-12">
+            <h3 className="text-xl font-semibold mb-4">
+              {category}
+            </h3>
+            <motion.div
+              className="grid lg:grid-cols-2 gap-x-24 gap-y-3 md:gap-y-4 rounded-2xl py-6 md:py-8"
+              variants={barsParent}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-150px" }}
+            >
+              {skills.map((skill, index) => (
+                <div key={index} className="flex items-start">
+                  <div className="flex flex-col text-right w-28 sm:w-32 mr-4">
+                    <h4 className=" shrink-0 font-medium text-white/85">
+                      {skill.name}
+                    </h4>
+                    {skill.info && (
+                      <span className="text-sm text-white/60">
+                        {skill.info}
+                      </span>
+                    )}
+                  </div>
+                  <div className="w-full rounded-full bg-white/10 mt-1">
+                    <motion.div
+                      className={`rounded-full h-3 opacity-80 bg-gradient-to-r ${skill.class}`}
+                      custom={skill.score}
+                      variants={bars}
+                    ></motion.div>
+                  </div>
                 </div>
-              </div>
-            ))}
-          </motion.div>
+              ))}
+            </motion.div>
         </div>
-      ))}
+        ))}
+      </div>
     </section>
   );
 }
