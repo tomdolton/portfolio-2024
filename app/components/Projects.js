@@ -15,7 +15,6 @@ export default function Projects({ className }) {
         "Tailwind CSS",
         "Storybook",
         "Laravel",
-        "OpenAI API",
       ],
       url: "https://pravi.com/",
       image: {
@@ -37,18 +36,25 @@ export default function Projects({ className }) {
       wide: false,
     },
     {
-      title: "Orbital Global websites",
-      text: "A suite of marketing websites for a digital services group, each statically generated with Next.js and powered by a Strapi headless CMS to enable flexible content management and blogging features. <br/><br/>As the sole developer working closely with a designer, I was responsible for the full implementation — from CMS integration to frontend architecture — and built custom animations using CSS, Framer Motion, and Lottie. The sites were deployed to Vercel and optimised for fast performance and smooth user experience.",
-      tech: ["Next.js", "React", "Tailwind CSS", "HTML5", "Strapi", "Vercel"],
-      url: "https://orbitalmedia.com",
+      title: "Ven",
+      text: "A comprehensive travel itinerary planning web application that allows users to organise complex multi-phase trips with detailed locations, accommodations, activities, and journey tracking. The app features interactive Google Maps API integration with real-time place search using the Google Places API, enabling users to visualise their entire trip and seamlessly plan transportation between destinations.<br/><br/>Built with Next.js and TypeScript, leveraging Supabase for authentication and real-time data management, and modern React patterns including custom hooks, Redux Toolkit state management, and TanStack React Query for efficient data fetching. The application features a fully responsive design using Tailwind CSS, shadcn/ui and Radix UI components, with comprehensive testing coverage using Jest and React Testing Library to ensure robust functionality across all user interactions and API integrations.",
+      tech: [
+        "Next.js",
+        "React",
+        "TypeScript", 
+        "Supabase",
+        "Tailwind CSS",
+      ],
+      url: "https://trip-planner-mocha-eight.vercel.app",
       image: {
-        url: "/images/projects/orbital-media.png",
-        alt: "The Orbital Media website homepage",
+        url: "/images/projects/ven.png",
+        alt: "Ven trip planner itinerary and map view",
         width: 355,
         height: 355,
         alignRight: true,
       },
       wide: true,
+      tall: false,
     },
     {
       title: "Discover More",
@@ -65,6 +71,20 @@ export default function Projects({ className }) {
       wide: false,
       tall: true,
     },
+    {
+      title: "Orbital Global websites",
+      text: "A suite of marketing websites for a digital services group, each statically generated with Next.js and powered by a Strapi headless CMS to enable flexible content management and blogging features. <br/><br/>As the sole developer working closely with a designer, I was responsible for the full implementation — from CMS integration to frontend architecture — and built custom animations using CSS, Framer Motion, and Lottie. The sites were deployed to Vercel and optimised for fast performance and smooth user experience.",
+      tech: ["Next.js", "React", "Tailwind CSS", "Strapi Headless CMS", "Vercel"],
+      url: "https://orbitalmedia.com",
+      image: {
+        url: "/images/projects/orbital-media.png",
+        alt: "The Orbital Media website homepage",
+        width: 355,
+        height: 355,
+        alignRight: false,
+      },
+      wide: true,
+    },
     // {
     //   title: "Innovation Labs",
     //   text: "Innovation Labs are a range of co-working hubs which provide support for entrepreneurship and skills acquisition. I was primarily responsible for building the website, which make user of multi level authentication for different user groups, Stripe payment API for managing subscriptions and the Google maps API.",
@@ -80,20 +100,20 @@ export default function Projects({ className }) {
     //   wide: false,
     //   tall: true,
     // },
-    {
-      title: "Scoop",
-      text: "Scoop is an interactive video platform built for training and educational experiences, allowing users to control their own journey through branching video content.<br/><br/>I developed custom video player controls and a flexible logic-tree system that enabled the platform to support multiple, reusable walkthrough experiences — each with its own unique branching paths and logic. This allowed the product to scale across different organisations and use cases without additional frontend redevelopment.<br/><br/>Videos are hosted and streamed via AWS, ensuring reliable delivery and performance at scale. State management is handled with Pinia, tracking user progress, video playback status, and inputs in real time to provide a seamless and personalised learning experience.<br/><br/>The platform is distributed as a series of standalone tools tailored for organisations who commission bespoke training content, enabling rapid deployment and easy maintenance.",
-      tech: ["Vue.js", "VideoJS", "Bulma", "SCSS", "AWS"],
-      url: "https://citb-scoop-drylining.com/",
-      image: {
-        url: "/images/projects/scoop.webp",
-        alt: "The Scoop website interactive video page",
-        width: 355,
-        height: 355,
-        alignRight: false,
-      },
-      wide: true,
-    },
+    // {
+    //   title: "Scoop",
+    //   text: "Scoop is an interactive video platform built for training and educational experiences, allowing users to control their own journey through branching video content.<br/><br/>I developed custom video player controls and a flexible logic-tree system that enabled the platform to support multiple, reusable walkthrough experiences — each with its own unique branching paths and logic. This allowed the product to scale across different organisations and use cases without additional frontend redevelopment.<br/><br/>Videos are hosted and streamed via AWS, ensuring reliable delivery and performance at scale. State management is handled with Pinia, tracking user progress, video playback status, and inputs in real time to provide a seamless and personalised learning experience.<br/><br/>The platform is distributed as a series of standalone tools tailored for organisations who commission bespoke training content, enabling rapid deployment and easy maintenance.",
+    //   tech: ["Vue.js", "VideoJS", "Bulma", "SCSS", "AWS"],
+    //   url: "https://citb-scoop-drylining.com/",
+    //   image: {
+    //     url: "/images/projects/scoop.webp",
+    //     alt: "The Scoop website interactive video page",
+    //     width: 355,
+    //     height: 355,
+    //     alignRight: false,
+    //   },
+    //   wide: true,
+    // },
   ];
 
   return (
