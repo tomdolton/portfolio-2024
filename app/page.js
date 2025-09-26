@@ -19,7 +19,7 @@ export default function Home() {
 
       <Banner className="py-60 md:py-48" />
 
-      <About className="md:pt-64" />
+      <About className="-mt-24 pt-24" />
 
       <div className="bg-gradient-2 bg-contain bg-no-repeat bg-left-top">
         <Projects className="pt-48" />

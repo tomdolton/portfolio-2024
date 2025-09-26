@@ -38,7 +38,7 @@ export default function Banner({ className }) {
   };
 
   return (
-    <header className={`${className} grid items-center justify-items-start relative`}>
+    <header className={`${className}  relative min-h-[calc(100vh-74px)]`}>
       <div className="container relative z-10">
         <motion.div variants={sentence} initial="hidden" animate="visible">
           <h1 className="max-[369px]:text-5xl text-6xl md:text-8xl font-medium text-center md:text-left relative mb-4">

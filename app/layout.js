@@ -13,6 +13,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        {/* Preload critical background images to prevent layout shifts */}
+        <link rel="preload" as="image" href="/images/background-2@2x.webp" />
+        <link rel="preload" as="image" href="/images/background-3@2x.webp" />
+      </head>
       {/* Global Site Tag (gtag.js) - Google Analytics */}
       <Script
         strategy="afterInteractive"
