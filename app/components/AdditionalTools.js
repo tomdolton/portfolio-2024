@@ -10,6 +10,7 @@ export default function AdditionalTools({ className }) {
       "Lottie",
       "Responsive Design",
       "Accessibility (WCAG)",
+      "Bootstrap",
     ],
 
     "Routing & State Management": [
@@ -44,7 +45,7 @@ export default function AdditionalTools({ className }) {
 
     "CMS & Platforms": ["Headless CMS", "Strapi", "WordPress"],
 
-    "Backend & Runtime": ["Node.js", "Express.js"],
+    "Backend & Runtime": ["Express.js"],
 
     "Security & SEO": ["SEO", "Progressive Web Apps (PWA)"],
 

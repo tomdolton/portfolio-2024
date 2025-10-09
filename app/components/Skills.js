@@ -70,14 +70,14 @@ export default function Skills({ className }) {
 
     "Frameworks & Libraries": [
       {
-        name: "Vue.js",
-        score: 90,
+        name: "React",
+        score: 85,
         color: "#42b883",
         class: "from-emerald-700 to-green-400",
       },
       {
-        name: "React",
-        score: 85,
+        name: "Vue.js",
+        score: 90,
         color: "#42b883",
         class: "from-emerald-700 to-green-400",
       },
@@ -94,14 +94,14 @@ export default function Skills({ className }) {
         class: "from-emerald-700 to-green-400",
       },
       {
-        name: "Tailwind CSS",
-        score: 98,
+        name: "Node.js",
+        score: 75,
         color: "#42b883",
         class: "from-emerald-700 to-green-400",
       },
       {
-        name: "Bootstrap",
-        score: 80,
+        name: "Tailwind CSS",
+        score: 98,
         color: "#42b883",
         class: "from-emerald-700 to-green-400",
       },
