@@ -23,6 +23,7 @@ export default function AdditionalTools({ className }) {
       "Vitest",
       "Jest",
       "Testing Library",
+      "Playwright",
       "Storybook",
       "Accessibility Testing (Lighthouse, axe-core)",
     ],
@@ -41,7 +42,7 @@ export default function AdditionalTools({ className }) {
       "CI/CD",
     ],
 
-    "CMS & Platforms": ["Strapi", "WordPress"],
+    "CMS & Platforms": ["Headless CMS", "Strapi", "WordPress"],
 
     "Backend & Runtime": ["Node.js", "Express.js"],
 

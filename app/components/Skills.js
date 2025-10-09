@@ -36,7 +36,7 @@ export default function Skills({ className }) {
       },
       {
         name: "TypeScript",
-        score: 80,
+        score: 75,
         color: "#22d3ee",
         class: "from-[#00B3CC] to-[#D6FF7F]",
       },
@@ -62,7 +62,7 @@ export default function Skills({ className }) {
       {
         name: "SQL",
         info: "(MySQL, PostgreSQL)",
-        score: 65,
+        score: 60,
         color: "#22d3ee",
         class: "from-[#00B3CC] to-[#D6FF7F]",
       },
@@ -111,13 +111,13 @@ export default function Skills({ className }) {
       {
         name: "Build Tools",
         info: "(Vite, Webpack)",
-        score: 75,
+        score: 85,
         color: "#6366f1",
         class: "from-indigo-700 to-indigo-400",
       },
       {
         name: "Git & Github",
-        score: 90,
+        score: 95,
         color: "#6366f1",
         class: "from-indigo-700 to-indigo-400",
       },
