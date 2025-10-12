@@ -21,7 +21,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav>
+    <nav className="relative z-50">
       <div className="px-4 md:px-8 py-4 flex items-center">
         <Link href="/">
           <Image
