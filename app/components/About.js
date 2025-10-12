@@ -22,22 +22,13 @@ export default function About({ className }) {
           viewport={{ once: true, margin: "-150px" }}
         >
           <p>
-            I&apos;m a full-stack developer with over 5 years of experience. I
-            build accessible, responsive websites and web apps using modern
-            HTML, CSS, Javascript, and PHP practices, having worked with clients
-            ranging from the Ministry of Justice to Teva International.
+            I&apos;m a full-stack web developer with over 5 years of professional experience, specialising in building accessible, high-performance web applications with a strong focus on frontend architecture and modern TypeScript development.
           </p>
           <p>
-            I often use React or Vue when writing Javascript, but can adapt to
-            whatever tools are required. I specialise in frontend development,
-            but also have experience working fullstack, particularly in the
-            Laravel and Next.js frameworks.
+            I create responsive, maintainable interfaces using React, Vue, and Next.js, and work confidently across the stack with Laravel, Supabase, and RESTful APIs. I&apos;ve delivered projects for clients ranging from the UK Ministry of Justice to Teva International, often taking ownership of the entire frontend build or shaping the project&apos;s technical direction.
           </p>
           <p>
-            My previous work experience in other industries, such as acoustics,
-            gives me a unique perspective on development. When I&apos;m not
-            coding, you can find me playing music or hiking in the great
-            outdoors.
+            My background in acoustics and music technology, gives me a unique problem-solving perspective and eye for detail. Outside of work, you&apos;ll find me exploring new music, experimenting with creative tech, or hiking somewhere off the grid.
           </p>
         </motion.div>
       </div>
