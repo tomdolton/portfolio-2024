@@ -17,7 +17,8 @@ export default function AdditionalTools({ className }) {
       "SSR",
       "Pinia",
       "Redux Toolkit",
-      "TanStack Query (React Query)"
+      "TanStack Query (React Query)",
+      "GraphQL (Apollo Client)",
     ],
 
     "Testing & Documentation": [
