@@ -28,7 +28,7 @@ export default function About({ className }) {
             I create responsive, maintainable interfaces using React, Vue, and Next.js, and work confidently across the stack with Laravel, Supabase, and RESTful APIs. I&apos;ve delivered projects for clients ranging from the UK Ministry of Justice to Teva International, often taking ownership of the entire frontend build or shaping the project&apos;s technical direction.
           </p>
           <p>
-            My background in acoustics and music technology, gives me a unique problem-solving perspective and eye for detail. Outside of work, you&apos;ll find me exploring new music, experimenting with creative tech, or hiking somewhere off the grid.
+            My background in acoustics and music technology, gives me a unique problem-solving perspective and eye for detail. Outside of work, you&apos;ll find me exploring new music, experimenting with creative tech, or hiking in the hills.
           </p>
         </motion.div>
       </div>
