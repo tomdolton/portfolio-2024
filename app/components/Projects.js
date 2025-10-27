@@ -10,7 +10,7 @@ export default function Projects({ className }) {
       title: "Pravi",
       text: "Pravi is a SaaS platform designed to help non-profit organisations attract and convert new donors. It leverages AI to generate data-driven donor personas and to create targeted fundraising campaigns and content.<br/><br/>As the lead frontend developer, I was responsible for building a component library using Storybook, architecting the Vue.js interface, and integrating dynamic workflows and multi-step form wizards. I also contributed to backend integration and developed full features, including the AI-powered campaign content generator using the OpenAI API.",
       tech: [
-        "Vue.js",
+        "React",
         "Typescript",
         "Tailwind CSS",
         "Storybook",
