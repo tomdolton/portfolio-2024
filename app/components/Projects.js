@@ -16,7 +16,7 @@ export default function Projects({ className }) {
         "Storybook",
         "Laravel",
       ],
-      url: "https://pravi.com/",
+      url: "https://pravi.ai/",
       image: {
         url: "/images/projects/pravi.webp",
         alt: "The Pravi app find new donors results page",
